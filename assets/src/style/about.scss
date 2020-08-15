@@ -1,0 +1,45 @@
+.about {
+  &__wrapper {
+    @include white-bg();
+    padding: 70px 0;
+  }
+  &__image {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (min-width: 750px) {
+  .about {
+    &__wrapper {
+      position: relative;
+      padding: 60px 0;
+    }
+    &__wrapper::after {
+      content: "";
+      display: block;
+      background-image: url(../img/after-about.png);
+      width: 11px;
+      height: 130px;
+      margin: 0 auto;
+      position: absolute;
+      bottom: -65px;
+      background-repeat: no-repeat;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .about {
+    display: flex;
+    align-items: center;
+    &__text {
+      order: 2;
+    }
+    &__wrapper {
+      padding-top: 100px;
+    }
+  }
+}

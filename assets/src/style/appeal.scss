@@ -1,0 +1,122 @@
+.appeal {
+  // padding: 30px 23px;
+  &--white {
+    background-color: #faf8fb;
+    color: #383d52;
+  }
+  &--purpure {
+    color: #ffffff;
+    background-color: #883eca;
+    box-shadow: 0px 23px 32px 0 #51085682;
+    border-radius: 10px;
+    // background-image: url(../img/appeal-purpure.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
+  &__form {
+    border-radius: 10px;
+    padding: 31px 24px;
+    line-height: 24px;
+  }
+  &__question {
+    margin-bottom: 0;
+  }
+  &__input {
+    border: none;
+    background-color: transparent;
+    padding: 14px;
+    font-family: "OpenSans Italic";
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 24px;
+  }
+  &--white {
+    .appeal__input {
+      color: #868995;
+    }
+    .appeal__input::placeholder {
+      color: #868995;
+    }
+  }
+  &--purpure {
+    .appeal__input {
+      color: #cccccc;
+    }
+    .appeal__input::placeholder {
+      color: #cccccc;
+    }
+  }
+  &__question {
+    font-family: "OpenSans Italic";
+    font-size: 13px;
+  }
+  &__act {
+    font-family: "OpenSans Semibold";
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 750px) {
+  .appeal {
+    padding: 0;
+    &__form {
+      padding: 30px 40px 50px;
+    }
+    &--purpure {
+      background-image: url(../img/appeal-purpure-tablet.png);
+      background-position: bottom 58px right -30px;
+    }
+    &__text-wrap {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-right: 50px;
+    }
+    &__input-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .appeal__input {
+        flex-grow: 0;
+        flex-basis: 27%;
+        margin-bottom: 0;
+      }
+      .appeal__btn {
+        flex-grow: 0;
+        flex-basis: 27%;
+      }
+    }
+  }
+  .services {
+    &__element--graphic {
+      .appeal {
+        padding: 0;
+        background-image: none;
+        &__form {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 30px;
+        }
+        &__question,
+        &__act,
+        &__btn {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .services {
+    &__element--graphic {
+      .appeal {
+        &__text-wrap {
+          display: block;
+          margin-right: 50px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

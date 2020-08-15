@@ -1,0 +1,74 @@
+.callback {
+  color: #fff;
+  background-color: #883eca;
+  background-image: url(../img/modal-bg-2.png);
+  box-shadow: 0 23px 32px 0 #51085682;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 95%;
+  max-width: 364px;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  pointer-events: auto;
+  background-clip: padding-box;
+  outline: 0;
+  &__form {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding: 60px;
+    line-height: 24px;
+  }
+  &__question {
+    font-family: "OpenSans Italic";
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+  &__act {
+    font-family: "OpenSans Semibold";
+    font-size: 16px;
+  }
+  &__input-wrap {
+    display: block;
+  }
+  &__input {
+    border: none;
+    background-color: transparent;
+    padding: 14px;
+    font-family: "OpenSans Italic";
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  &__input::placeholder {
+    color: #ffffff;
+  }
+  &__btn {
+    border: none;
+    margin-top: 20px;
+    font-family: "OpenSans Bold";
+    font-size: 16px;
+    background-color: #fb0275;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-border-radius: 24px;
+    border-radius: 24px;
+    padding: 10px;
+    width: 100%;
+  }
+  &__close {
+    width: 17px;
+    height: 17px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    font-size: 17px;
+    position: absolute;
+    right: 0;
+    margin-right: 3px;
+  }
+}

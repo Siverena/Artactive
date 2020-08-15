@@ -1,0 +1,32 @@
+.footer {
+  background-color: #65269d;
+  padding: 50px 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 13px;
+  &__link {
+    color: inherit;
+    text-decoration: underline;
+    margin-bottom: 35px;
+  }
+  &__copyrite {
+    margin-top: 35px;
+  }
+}
+
+@media (min-width: 750px) {
+  .footer {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .footer__link,
+      .footer__copyrite {
+        margin: 0;
+      }
+      .footer__link {
+        order: 1;
+      }
+    }
+  }
+}

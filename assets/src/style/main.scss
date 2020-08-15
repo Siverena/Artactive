@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Muller Extra Bold";
+  src: url(../fonts/MullerExtraBold.woff) format('woff'), url(../fonts/MullerExtraBold.woff2) format('woff2');
+  font-weight: 400;
+  font-style: bold
+}
+
+@font-face {
+  font-family: "Muller Bold";
+  src: url(../fonts/MullerBold.woff) format('woff'), url(../fonts/MullerBold.woff2) format('woff2');
+  font-weight: 400;
+  font-style: bold
+}
+
+@font-face {
+  font-family: "Muller Medium";
+  src: url(../fonts/MullerMedium.woff) format('woff'), url(../fonts/MullerMedium.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "OpenSans ExtraBold";
+  src: url(../fonts/OpenSans-ExtraBold.woff) format('woff'), url(../fonts/OpenSans-ExtraBold.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "OpenSans Bold";
+  src: url(../fonts/OpenSans-Bold.woff) format('woff'), url(../fonts/OpenSans-Bold.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "OpenSans Regular";
+  src: url(../fonts/OpenSans-Regular.woff) format('woff'), url(../fonts/OpenSans-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "OpenSans Italic";
+  src: url(../fonts/OpenSans-Italic.woff) format('woff'), url(../fonts/OpenSans-Italic.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "OpenSans Semibold";
+  src: url(../fonts/OpenSans-SemiBold.woff) format('woff'), url(../fonts/OpenSans-SemiBold.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal
+}
+
+*:focus,
+*:active {
+  outline: none!important;
+}
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+$grid-breakpoints: ( xs: 0, sm: 320px, md: 750px, lg: 1170px);
+$container-max-widths: ( sm: 100%, md: 720px, lg: 1140px);
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+body {
+  background-color: #ffffff;
+}
+
+.site-btn {
+  border: none;
+  margin-top: 20px;
+  font-family: "OpenSans Bold";
+  font-size: 16px;
+  background-color: #fb0275;
+  color: #ffffff;
+  text-transform: uppercase;
+  -webkit-border-radius: 24px;
+  border-radius: 24px;
+  padding: 10px;
+}
+
+.site-btn:hover {
+  background-color: #c1065d;
+}
+
+.site-btn:focus,
+.site-btn:active {
+  background-color: #fb1d84;
+}
+
+.section-header-2 {
+  font-family: 'Muller Bold';
+  font-size: 30px;
+  color: #7f38bd;
+  position: relative;
+  z-index: 10;
+}
+
+.section-header-3 {
+  font-family: 'Muller Medium';
+  font-size: 24px;
+  color: #383d52;
+  margin: 35px 0 42px;
+  position: relative;
+  span {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.site-par {
+  font-family: "OpenSans Regular";
+  color: #5e606a;
+  font-size: 14px;
+  line-height: 27px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.site-content {
+  background-image: url(../img/fon-spectr-mob.png);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-color: #ffffff;
+}
+
+@media (min-width: 750px) {
+  .site-content {
+    background-image: url(../img/fon-spectr-tablet.png);
+  }
+}
+
+@mixin white-bg () {
+  background-color: #ffffff;
+  background-repeat: repeat-y;
+  background-position: center;
+  background-image: url(../img/fon-spectr-mob.png);
+  @media (min-width: 750px) {
+    background-image: url(../img/fon-spectr-tablet.png);
+  }
+  @media (min-width: 1170px) {
+    background-image: url(../img/fon-spectr-desktop.png);
+  }
+}
+
+@media (min-width: 1170px) {
+  .section-header-3 {
+    font-size: 32px;
+  }
+}
+
+@import "header.scss";
+@import "navbar-custom.scss";
+@import "site.scss";
+@import "about.scss";
+@import "services.scss";
+@import "graphic.scss";
+@import "portfolio.scss";
+@import "interior.scss";
+@import "visits.scss";
+@import "appeal.scss";
+@import "reviews.scss";
+@import "contacts.scss";
+@import "faq.scss";
+@import "footer.scss";
+@import "callback.scss";

@@ -1,0 +1,71 @@
+.interior {
+  background-image: url(../img/sofa.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  font-family: "OpenSans Regular";
+  padding-bottom: 200px;
+  position: relative;
+  &__wrapper {
+    @include white-bg();
+    padding: 55px 0 80px;
+    position: relative;
+  }
+  &__header-3::before {
+    content: "2";
+    position: absolute;
+    top: -83px;
+    left: 30px;
+    font-family: Muller, Arial, sans-serif;
+    font-size: 200px;
+    font-weight: 900;
+    color: #faf8fb;
+    text-shadow: 0 0 21px rgba(81, 8, 86, .18);
+  }
+}
+
+@media (min-width: 750px) {
+  .interior {
+    background-image: url(../img/sofa-tablet.png);
+    padding-bottom: 323px;
+    padding-top: 68px;
+    &__wrapper::after {
+      content: "";
+      display: block;
+      background-image: url(../img/after-about.png);
+      width: 11px;
+      height: 130px;
+      margin: 0 auto;
+      position: absolute;
+      z-index: 10;
+      bottom: -65px;
+      background-repeat: no-repeat;
+      left: 0;
+      right: 0;
+    }
+    &__content {
+      padding-right: 200px;
+    }
+    .site-btn {
+      padding: 19px 37px;
+      border-radius: 36px;
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .interior {
+    background-image: url(../img/sofa-desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 491px;
+    padding-top: 96px;
+    &__wrapper {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &__content {
+      padding: 0 0px 0 600px;
+    }
+  }
+}

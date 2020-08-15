@@ -1,0 +1,57 @@
+.faq {
+  &__wrapper {
+    @include white-bg();
+    padding: 70px 0;
+  }
+}
+
+@media (min-width: 750px) {
+  .faq {
+    &__wrapper {
+      @include white-bg();
+      position: relative;
+    }
+    &__wrapper::after {
+      content: "";
+      display: block;
+      background-image: url(../img/after-about.png);
+      width: 11px;
+      height: 130px;
+      margin: 0 auto;
+      position: absolute;
+      z-index: 10;
+      bottom: -65px;
+      right: 200px;
+      background-repeat: no-repeat;
+    }
+    &__header {
+      margin-bottom: 60px;
+    }
+    dt {
+      color: #383d52;
+      font-size: 20px;
+      line-height: 30px;
+      font-family: "OpenSans Semibold";
+      margin-bottom: 30px;
+    }
+    dd {
+      font-family: "OpenSans Regular";
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .faq {
+    .appeal {
+      &__form {
+        padding: 30px 40px 50px 293px;
+      }
+      &--purpure {
+        background-position: center left;
+      }
+    }
+  }
+}

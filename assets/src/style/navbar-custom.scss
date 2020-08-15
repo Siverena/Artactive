@@ -1,0 +1,193 @@
+.navbar {
+  position: static;
+  &__collapse {
+    padding: 16px 25px 28px 50px;
+    position: absolute;
+    height: 100%;
+    right: -100%;
+    display: flex;
+    top: 0;
+    width: 300px;
+    background-color: #ffffff;
+    z-index: 50;
+    color: #000000;
+    flex-direction: column;
+    transition: right, 1s;
+  }
+  &__btn {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    &--open {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .open-image {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+      }
+      &::before {
+        content: "";
+        display: block;
+        top: 0px;
+        right: 0;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+      }
+      &::after {
+        content: "";
+        display: block;
+        top: 0px;
+        right: 0;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+      }
+      &:active,
+      &:focus {
+        .open-image,
+        &::after,
+        &::before {
+          background-color: #636060;
+        }
+      }
+    }
+    &--close {
+      position: relative;
+      margin-left: auto;
+      .close-image {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        &::after {
+          content: "";
+          display: block;
+          top: 11px;
+          right: 0;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: #4b4949;
+          transform: rotate(-45deg);
+        }
+        &::before {
+          content: "";
+          display: block;
+          top: 11px;
+          right: 0px;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: #4b4949;
+          transform: rotate(45deg);
+        }
+        &:hover::after,
+        &:hover::before {
+          background-color: #000000;
+        }
+      }
+    }
+  }
+  &__list {
+    list-style: none;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+  &__link {
+    color: #000000;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: "OpenSans Semibold";
+  }
+  &__link:hover,
+  &__phone-link:hover {
+    color: #fb0275;
+    text-decoration: none;
+  }
+  &__phone-link {
+    color: #000000;
+    font-size: 16px;
+    font-family: "OpenSans Bold";
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+  }
+  &__btn--call {
+    border: 2px solid #fb0275;
+    background-color: #ffffff;
+    color: #fb0275;
+  }
+  &__btn--call:hover {
+    background-color: #fb0275;
+    color: #ffffff;
+  }
+}
+
+.nav-show {
+  right: 0;
+  transition: right, 1s;
+}
+
+@media (min-width: 1170px) {
+  .navbar {
+    position: static;
+    &__collapse {
+      transition: none;
+      padding: 0;
+      position: static;
+      width: 100%;
+      background-color: transparent;
+      height: auto;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+    &__btn {
+      display: none;
+    }
+    &__list {
+      list-style: none;
+      margin-bottom: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    &__link {
+      color: #ffffff;
+      line-height: 13px;
+      margin: 0 10px;
+    }
+    &__link:hover,
+    &__phone-link:hover {
+      color: #fb0275;
+      text-decoration: none;
+    }
+    &__phone-link {
+      color: #ffffff;
+      margin-bottom: 0;
+    }
+    &__btn--call {
+      border: 2px solid #ffffff;
+      background-color: transparent;
+      color: #ffffff;
+      margin: 0;
+      font-size: 11px;
+      padding: 11px 24px;
+    }
+    &__btn--call:hover {
+      border: 2px solid #fb0275;
+      background-color: transparent;
+      color: #fb0275;
+    }
+  }
+}
